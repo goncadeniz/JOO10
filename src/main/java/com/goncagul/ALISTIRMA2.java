@@ -13,7 +13,15 @@ public class ALISTIRMA2 {
         System.out.println("Final notunuzu girin ");
         int finalNotu = sc.nextInt();
         int ortalama= ((vize * 40)+(finalNotu * 60))/100;
-        System.out.println("ortalamanız"+ortalama);
+        System.out.println("ortalamanız "+ortalama);
+        if(ortalama>=60)
+        {
+            System.out.println("Geçtiniz ");
+        }
+        else
+        {
+            System.out.println("Kaldınız ");
+        }
 
     }
 }

@@ -34,7 +34,7 @@ public class SORULAR3 {
             int sayi=sc.nextInt();
             for (int i=1;i<=sayi;i++)
             {
-                System.out.println("Sayı"+"i: "+ (i*i*i));
+                System.out.println("Sayı"+i + (i*i*i));
             }
 
         }while(sayı!=0);

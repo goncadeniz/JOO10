@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class SORULAR4 {
     public static void main(String[] args) {
         int toplam=0;
-        int enBuyuk=1;
-        int enKucuk=1;
-        int ortalama=0;
+        int enBuyuk=0;
+        int enKucuk=0;
+        double  ortalama=0;
         int adet=0;
+        int sayi;
         do{
 
             System.out.println("""
@@ -18,7 +19,7 @@ public class SORULAR4 {
                  Temel kural olarak Kullanıcının girdiği geçerli sayıların toplamı 100 ü geçtiğinde 
                  sayı istemeyi durduracaksınız. Kullanıcıdan alınan sayıların en büyük olanı, en küçük olanı 
                  ve ortalamasını hesaplayan kodu yazınız.
-                
+               
                 Örn:
                 
                 Sayı gir…: 5
@@ -38,35 +39,33 @@ public class SORULAR4 {
                 """);
             Scanner sc=new Scanner(System.in);
             System.out.println("Lütfen 0-100 ARASINDA  bir sayı giriniz ");
-            int sayi=sc.nextInt();
-
+             sayi=sc.nextInt();
             if(sayi>100)
             {
                 System.out.println("Girilen sayı 0-100 aralığı dışındadır.Lütfen tekrar bir sayı giriniz ");
                 sayi=sc.nextInt();
-
-
             }
             else
             {
-                adet++;
                 toplam+=sayi;
-
+                adet++;
             }
-           if(enBuyuk<sayi)
-           {
-               enBuyuk=sayi;
-           }
-           if(enKucuk>sayi)
-           {
-               enKucuk=sayi;
-           }
-           ortalama=toplam/adet;
-            System.out.println("En büyük sayı "+enBuyuk);
-            System.out.println("En küçük sayı "+enKucuk);
-            System.out.println("ortalama"+ortalama);
+
 
 
         }while(!(toplam>100));
+        if(enBuyuk<sayi)
+        {
+            enBuyuk=sayi;
+        }
+        if(enKucuk<sayi)
+        {
+            enKucuk=sayi;
+        }
+        ortalama=toplam/adet;
+        System.out.println("en büyük sayı "+enBuyuk);
+        System.out.println( "en küçük sayı "+enKucuk);
+        System.out.println("ortalama"+ortalama);
+
     }
 }

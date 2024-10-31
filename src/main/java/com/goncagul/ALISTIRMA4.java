@@ -11,7 +11,7 @@ public class ALISTIRMA4 {
         Scanner sc=new Scanner(System.in);
         String cumle=sc.nextLine();
         int karakterSayısı=cumle.replace(" ","").length();
-        System.out.println("cümledeki karakter sayısı" +karakterSayısı);
+        System.out.println("cümledeki karakter sayısı...:" +karakterSayısı);
 
     }
 }

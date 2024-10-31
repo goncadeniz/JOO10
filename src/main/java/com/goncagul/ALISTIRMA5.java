@@ -7,9 +7,9 @@ public class ALISTIRMA5 {
         //Kullanıcıdan bir ürünün fiyatını alın ve %18 KDV eklenmiş halini ekrana yazdıran bir program yazın.
 
         Scanner sc=new Scanner(System.in);
-        System.out.println("ürünün fiyatını girin ");
+        System.out.println("ürünün fiyatını giriniz ");
         int fiyat=sc.nextInt();
         int kdvliFiyat= (fiyat*18)/100;
-        System.out.println("Ürünün kdvli fiyatı "+kdvliFiyat);
+        System.out.println("Ürünün kdvli fiyatı....: "+kdvliFiyat);
     }
 }

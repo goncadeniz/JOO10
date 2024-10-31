@@ -14,10 +14,10 @@ public class ALISTIRMA6 {
              sayi=sc.nextInt();
             if(sayi%2==0)
             {
-                System.out.println("Bu sayı çifttir");
+                System.out.println("Girdiğiniz  sayı çifttir");
             }
             else {
-                System.out.println("Sayı çift değildir");
+                System.out.println("Girdiğiniz sayı tektir ");
             }
         }while (sayi!=-1);
     }

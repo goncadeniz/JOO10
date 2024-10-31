@@ -1,11 +1,13 @@
 package com.goncagul;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class SORULAR2 {
     public static void main(String[] args) {
 
-              int cikis=0;
+
+              boolean sec=false;
               do {
 
                   System.out.println("""
@@ -19,9 +21,9 @@ public class SORULAR2 {
                 
                 - Toplam maliyet motor tipine göre hesaplanacaktır
                 
-                - LPG 100km de 3.3lt
+                - LPG 100km de 3.3 lt
                 
-                - HIBRIT 100km de 4.2lt
+                - HIBRIT 100km de 4.2 lt
                 
                 - LPG yakıtı 1.6₺ 1 litre için
                 
@@ -38,7 +40,7 @@ public class SORULAR2 {
             
                 """);
 
-                  int maliyet;
+
                   Scanner sc=new Scanner(System.in);
                   System.out.println(" LÜTFEN MOTOR TİPİNİ BELİRTİNİZ ....LPG  İÇİN  L   HİBRİT İÇİN H  TUŞUNA BASINIZ ");
                   Scanner scn=new Scanner(System.in);
@@ -47,12 +49,29 @@ public class SORULAR2 {
                   int arabaYası=scn.nextInt();
                   System.out.println("Lütfen kaç kilometre yol gittiğinizi yazınız ");
                   int kilometre=scn.nextInt();
+
+
                   double  maliyetLpg=(kilometre * 33)*16;
                   double maliyetHibrit=(kilometre * 42)*16;
 
+
+                 int durum;
+                  if( arabaYası<=7)
+                  {
+                      durum=1;
+                  }
+                  else if(arabaYası>=7  &&  arabaYası<=12 )
+                  {
+                      durum=2;
+                  }
+                  else {
+                      durum=3;
+                  }
+
+
                   if(motorTipi.toUpperCase().equals("L") )
                   {
-                      switch (arabaYası)
+                      switch (durum)
                       {
                           case 1:
                               if( arabaYası<=7)
@@ -76,7 +95,7 @@ public class SORULAR2 {
                   else if(motorTipi.toUpperCase().equals("H"))
                   {
 
-                      switch (arabaYası)
+                      switch (durum)
                       {
                           case 1:
                               if( arabaYası<=7)
@@ -104,7 +123,8 @@ public class SORULAR2 {
                   }
 
 
-              }while(cikis!=0);
+              }while(sec);
+
 
 
     }
